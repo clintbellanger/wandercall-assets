@@ -1,0 +1,35 @@
+import bpy
+from math import radians
+
+angle = -45
+axis = 2 # z-axis
+armature_name = "FemaleArm" # has multiple animations actions
+
+# RenderPlatform is an Empty object located at the origin
+# and has the lights and cameras attached as children.
+platform = bpy.data.objects["RenderPlatform"]
+original_path = bpy.data.scenes[0].render.filepath
+
+arm = bpy.ops.object.select_pattern(armature_name)
+
+# Render all animations
+for action in bpy.data.actions:
+
+    # make this action the active one    
+    arm.animation_data.action = action    
+
+    # Render in all 8 facing directions
+    for i in range(0,8):
+
+        # rotate the render platform and all children
+        temp_rot = platform.rotation_euler
+        temp_rot[axis] = temp_rot[axis] - radians(angle)
+        platform.rotation_euler = temp_rot;
+
+        # set the filename action and direction prefix
+        bpy.data.scenes[0].render.filepath = original_path + action.name + str(i)
+
+        # render animation for this direction
+        bpy.ops.render.render(animation=True)
+
+bpy.data.scenes[0].render.filepath = original_path
