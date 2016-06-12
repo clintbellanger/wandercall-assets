@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="isometric" renderorder="right-down" width="20" height="20" tilewidth="128" tileheight="64" backgroundcolor="#646464" nextobjectid="1">
+ <properties>
+  <property name="tileset" value="tilesetdefs/tileset_demo.txt"/>
+ </properties>
  <tileset firstgid="1" name="floor_1x1" tilewidth="128" tileheight="96" tilecount="1" columns="1">
   <tileoffset x="0" y="28"/>
   <image source="floor_1x1.png" width="128" height="96"/>
