@@ -1,0 +1,12 @@
+Internal menus max size:
+960x720 (up from 640x480)
+Side menu sizes:
+480x512 (up from 320x416)
+
+Room for 18 inventory slots if using 64px icons.
+
+Armor: Head Chest Hands Legs Feet
+Weapons: Main, Off, Swap main, Swap off?
+Specials: Ring1, Ring2, Artifact1, Artifact2
+
+
