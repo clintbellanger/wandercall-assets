@@ -1,7 +1,8 @@
-del Idle*17.png
-del Run*17.png
 del Attack*17.png
+del Run*17.png
+del Idle*17.png
 del Kneel*17.png
+del Dash*17.png
 
 montage -background "transparent" -tile 8x8 -geometry 256x256 Idle*.png _1idle.png
 
@@ -11,6 +12,6 @@ montage -background "transparent" -tile 8x8 -geometry 256x256 Attack*.png _3atta
 
 montage -background "transparent" -tile 8x8 -geometry 256x256 Kneel*.png _4die.png
 
-montage -background "transparent" -tile 4x1 _*.png -geometry 2048 -mode concatenate tilesheet.png
+montage -background "transparent" -tile 8x8 -geometry 256x256 Dash*.png _5dash.png
 
-
+montage -background "transparent" -tile 5x1 _*.png -geometry 2048 -mode concatenate tilesheet.png
