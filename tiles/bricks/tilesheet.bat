@@ -1,0 +1,1 @@
+montage -background "transparent" -geometry 128x256 -tile 12x2 0*.png tileset.png
