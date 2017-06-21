@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="isometric" renderorder="right-down" width="20" height="20" tilewidth="128" tileheight="64" backgroundcolor="#666666" nextobjectid="1">
+<map version="1.0" orientation="isometric" renderorder="right-down" width="20" height="20" tilewidth="128" tileheight="64" backgroundcolor="#010001" nextobjectid="1">
  <tileset firstgid="1" name="walls" tilewidth="128" tileheight="256" tilecount="24" columns="12">
   <image source="tileset.png" width="1536" height="512"/>
  </tileset>
- <layer name="Tile Layer 1" width="20" height="20">
+ <tileset firstgid="25" name="floor1" tilewidth="128" tileheight="96" tilecount="1" columns="1">
+  <tileoffset x="0" y="28"/>
+  <image source="floor1.png" width="128" height="96"/>
+ </tileset>
+ <tileset firstgid="26" name="floor2" tilewidth="128" tileheight="96" tilecount="1" columns="1">
+  <tileoffset x="0" y="28"/>
+  <image source="floor2.png" width="128" height="96"/>
+ </tileset>
+ <layer name="background" width="20" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,25,25,25,25,0,0,0,25,25,25,26,25,
+0,0,0,0,0,0,0,0,26,25,26,26,25,26,26,25,25,26,26,26,
+0,0,0,0,0,0,0,0,25,25,26,25,26,25,26,25,25,26,26,25,
+0,0,25,26,26,26,0,0,26,25,26,26,25,26,25,26,26,26,26,26,
+0,0,26,0,0,26,0,0,26,25,26,26,0,0,0,26,25,25,25,26,
+0,0,26,0,0,26,0,0,0,0,0,0,0,0,0,26,26,26,26,26,
+0,0,25,26,26,25,0,0,0,0,0,0,0,0,0,26,25,26,26,26,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,26,26,26,26,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,25,26,25,0,0,0,0,0,0,0,0,26,26,0,0,0,0,0,
+0,0,25,26,25,26,26,25,25,26,0,0,0,25,25,0,0,0,0,0,
+0,0,26,25,26,26,26,25,25,26,0,0,0,0,0,0,0,0,0,0,
+0,0,26,26,25,0,0,26,26,26,0,0,0,26,25,25,0,0,0,25,
+0,0,0,0,0,0,0,0,26,0,0,0,0,25,25,26,0,0,25,26,
+0,0,0,0,0,0,0,0,26,0,0,0,0,26,25,25,0,0,0,26,
+0,25,25,25,26,25,0,0,26,0,0,0,0,26,25,25,0,0,0,25,
+0,26,0,0,0,25,0,25,25,26,0,0,0,26,26,26,0,0,0,26,
+0,26,0,0,0,25,0,25,0,26,0,0,0,26,25,26,0,0,26,26,
+0,25,0,0,0,26,0,26,26,25,0,0,0,25,25,25,0,0,0,26,
+0,25,25,25,26,25,0,0,0,0,0,0,0,25,26,25,0,0,0,25
+</data>
+ </layer>
+ <layer name="object" width="20" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,6,2,2,7,0,0,0,6,2,2,2,7,
 0,0,0,0,0,0,0,0,1,0,0,11,2,2,2,10,0,0,0,3,
